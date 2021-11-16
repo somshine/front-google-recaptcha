@@ -19,3 +19,9 @@
     Google V3 reCaptcha working in background for this page.
   </div>
 <button class="btn btn-success form-control col-6" (click)="submitScore()">Submit</button>
+
+<div *ngIf="captchaResponse">
+    <div class="alert alert-success" role="alert">
+        Captcha verified successfully.
+    </div>
+</div>

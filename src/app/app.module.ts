@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UpdateScoreComponent } from './update-score/update-score.component';
 import { ReCaptchaModule } from 'angular-recaptcha3';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReCaptchaModule.forRoot({
       invisible: {
         sitekey: '6LesTTYdAAAAAJjrHdymsHU-EhQ1AL4_wjJQ_W1P',
