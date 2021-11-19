@@ -7,11 +7,13 @@ import { UpdateScoreComponent } from './update-score/update-score.component';
 import { ReCaptchaModule } from 'angular-recaptcha3';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PostDataComponent } from './post-data/post-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UpdateScoreComponent
+    UpdateScoreComponent,
+    PostDataComponent
   ],
   imports: [
     BrowserModule,

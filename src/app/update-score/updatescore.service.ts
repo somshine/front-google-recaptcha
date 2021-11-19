@@ -20,11 +20,12 @@ export class UpdatescoreService {
     return this.httpClient.get<CaptchaResponse>(this.verificationOfToken);
   }
 
-  verifyToken(token: string): Observable<CaptchaResponse> {
+  verifyToken(token: string, score: number): Observable<CaptchaResponse> {
     let response: Object = "";
     response = {
-      "response": token
+      "response": token,
+      "score": score
     };
-    return this.httpClient.post<CaptchaResponse>(this.verificationOfToken, token, this.httpOptions);
+    return this.httpClient.post<CaptchaResponse>(this.verificationOfToken, response, this.httpOptions);
   }
 }

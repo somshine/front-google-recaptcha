@@ -33,7 +33,8 @@ export class UpdateScoreComponent implements OnInit {
   public submitScore(): void {
     this.recaptchaService.execute({ action: 'login' }).then(token => {
       console.log("this is the token :: " + token);
-      this.updateScoreService.verifyToken(token).subscribe(captchaResponse => this.captchaResponse = captchaResponse);
+      console.log("this is the token :: " + this.score);
+      this.updateScoreService.verifyToken(token, this.score).subscribe(captchaResponse => this.captchaResponse = captchaResponse);
     });
   }
 
